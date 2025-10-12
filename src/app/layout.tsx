@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Camaral | Pitch",
     description:
-      "Photorealistic AI avatars that qualify leads, onboard customers, and run meetings in real time.",
+      "AI avatars that qualify leads, onboard customers, and run meetings in real time.",
     type: "website",
     images: [
       {

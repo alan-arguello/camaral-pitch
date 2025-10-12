@@ -99,7 +99,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
       eyebrow: "Camaral",
       title: "Real-time AI avatars.",
       subtitle:
-        "We help customer experience and marketing teams deliver natural conversations at scale with photorealistic AI agents.",
+        "We help customer experience and marketing teams deliver natural conversations at scale with AI agents.",
       primaryCta: {
         type: "link",
         label: "Book a demo",
@@ -375,7 +375,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
       eyebrow: "Camaral",
       title: "Creamos avatares de IA en tiempo real.",
       subtitle:
-        "Ayudamos a equipos de customer experience y marketing a ofrecer conversaciones humanas a escala con agentes de IA fotorrealistas.",
+        "Ayudamos a equipos de customer experience y marketing a ofrecer conversaciones humanas a escala con agentes de IA.",
       primaryCta: {
         type: "link",
         label: "Agenda una demo",
