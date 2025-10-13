@@ -38,25 +38,25 @@ export function AliadosTeam({ heading, caption, members }: AliadosTeamProps) {
   ];
 
   return (
-    <section id="team" className="relative py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="team" className="relative py-16 sm:py-24 md:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="mb-12 max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="mb-8 sm:mb-12 max-w-3xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
             {heading}
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">{caption}</p>
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed px-2">{caption}</p>
         </div>
 
         {/* Team Grid */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {members.map((member) => (
             <article
               key={member.name}
-              className="group flex h-full flex-col gap-6 rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition hover:shadow-md"
+              className="group flex h-full flex-col gap-4 sm:gap-6 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 shadow-sm transition hover:shadow-md"
             >
-              <div className="flex items-center gap-4">
-                <div className="relative h-16 w-16 overflow-hidden rounded-xl border-2 border-gray-200">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="relative h-12 w-12 sm:h-16 sm:w-16 overflow-hidden rounded-xl border-2 border-gray-200">
                   <Image
                     src={memberImages[member.name] || "/samuel.jpeg"}
                     alt={member.name}
@@ -66,17 +66,17 @@ export function AliadosTeam({ heading, caption, members }: AliadosTeamProps) {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <h3 className="text-lg font-bold text-gray-900">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900">
                     {member.name}
                   </h3>
-                  <p className="text-sm text-gray-600">{member.role}</p>
+                  <p className="text-xs sm:text-sm text-gray-600">{member.role}</p>
                 </div>
               </div>
-              <ul className="flex flex-1 flex-col gap-3 text-sm leading-snug text-gray-700">
+              <ul className="flex flex-1 flex-col gap-2 sm:gap-3 text-xs sm:text-sm leading-snug text-gray-700">
                 {member.highlights.map((highlight) => (
                   <li key={highlight} className="flex items-start gap-2">
                     <span
-                      className="mt-2 inline-flex h-1.5 w-1.5 flex-none rounded-full bg-[#0dc7ff]"
+                      className="mt-1.5 sm:mt-2 inline-flex h-1.5 w-1.5 flex-none rounded-full bg-[#0dc7ff]"
                       aria-hidden
                     />
                     <span>{highlight}</span>
@@ -86,7 +86,7 @@ export function AliadosTeam({ heading, caption, members }: AliadosTeamProps) {
               <Link
                 href={member.linkedin}
                 target="_blank"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 transition hover:text-[#0dc7ff]"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-900 transition hover:text-[#0dc7ff]"
               >
                 LinkedIn
                 <span aria-hidden>↗</span>

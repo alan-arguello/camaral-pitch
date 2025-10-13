@@ -19,18 +19,18 @@ export function AliadosMedia({ heading, caption, items }: AliadosMediaProps) {
   };
 
   return (
-    <section className="relative py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="relative py-16 sm:py-24 md:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="mb-12 max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="mb-8 sm:mb-12 max-w-3xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
             {heading}
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">{caption}</p>
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed px-2">{caption}</p>
         </div>
 
         {/* Videos Grid */}
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => (
             <div
               key={item.href}
@@ -46,13 +46,13 @@ export function AliadosMedia({ heading, caption, items }: AliadosMediaProps) {
                 </video>
               </div>
               <div className="p-4">
-                <h3 className="mb-2 font-semibold text-gray-900">
+                <h3 className="mb-2 font-semibold text-gray-900 text-sm sm:text-base">
                   {item.label}
                 </h3>
                 <Link
                   href={item.href}
                   target="_blank"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#0dc7ff] transition hover:text-[#06b6ef]"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#0dc7ff] transition hover:text-[#06b6ef]"
                 >
                   Ver en LinkedIn
                   <span aria-hidden>↗</span>
