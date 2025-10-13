@@ -28,6 +28,32 @@ export function AndeHero({
           transition={{ duration: 0.6 }}
           className="text-center space-y-12"
         >
+          {/* Avatar */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="flex justify-center mb-8"
+          >
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative w-32 h-32 md:w-40 md:h-40"
+            >
+              <Image
+                src="/avatar1.gif"
+                alt="AI Avatar"
+                fill
+                className="object-contain rounded-full"
+                priority
+              />
+            </motion.div>
+          </motion.div>
+
           {/* Logos */}
           <div className="flex items-center justify-center gap-8 mb-12">
             <div className="relative w-24 h-24 rounded-2xl overflow-hidden border border-[var(--brand-border)] bg-white shadow-sm">
