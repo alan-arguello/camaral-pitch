@@ -33,6 +33,15 @@ export interface DeckContent {
       linkedin: string;
     }>;
   };
+  traction: {
+    heading: string;
+    caption: string;
+    metrics: Array<{
+      label: string;
+      value: string;
+    }>;
+    image: string;
+  };
   investors: {
     heading: string;
     caption: string;
@@ -167,6 +176,30 @@ export const deckCopy: Record<Locale, DeckContent> = {
           linkedin: "https://www.linkedin.com/in/octaviorazoverduzco",
         },
       ],
+    },
+    traction: {
+      heading: "Early traction and momentum",
+      caption:
+        "We're just getting started, but the results speak for themselves.",
+      metrics: [
+        {
+          label: "Launched",
+          value: "First week of October",
+        },
+        {
+          label: "First paid clients",
+          value: "7 ($250 MRR)",
+        },
+        {
+          label: "One-off revenue",
+          value: "$1,800 USD",
+        },
+        {
+          label: "Raising",
+          value: "$300k USD pre-seed",
+        },
+      ],
+      image: "/team.jpeg",
     },
     investors: {
       heading: "Backed by world-class operators",
@@ -449,6 +482,30 @@ export const deckCopy: Record<Locale, DeckContent> = {
           linkedin: "https://www.linkedin.com/in/octaviorazoverduzco",
         },
       ],
+    },
+    traction: {
+      heading: "Tracción temprana y momentum",
+      caption:
+        "Apenas estamos empezando, pero los resultados hablan por sí solos.",
+      metrics: [
+        {
+          label: "Lanzamiento",
+          value: "Primera semana de octubre",
+        },
+        {
+          label: "Primeros clientes pagados",
+          value: "7 ($250 MRR)",
+        },
+        {
+          label: "Ingresos únicos",
+          value: "$1,800 USD",
+        },
+        {
+          label: "Levantando",
+          value: "$300k USD pre-seed",
+        },
+      ],
+      image: "/team.jpeg",
     },
     investors: {
       heading: "Con el apoyo de operadores de talla mundial",

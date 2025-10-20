@@ -66,6 +66,12 @@ export function DeckExperience({ showLanguageDialog }: DeckExperienceProps) {
             caption={content.team.caption}
             members={content.team.members}
           />
+          <TractionSection
+            heading={content.traction.heading}
+            caption={content.traction.caption}
+            metrics={content.traction.metrics}
+            image={content.traction.image}
+          />
           <CompaniesCarousel />
           <InvestorsSection
             locale={locale}
@@ -273,6 +279,54 @@ function TeamSection({ heading, caption, members }: TeamSectionProps) {
             </Link>
           </article>
         ))}
+      </div>
+    </section>
+  );
+}
+
+interface TractionSectionProps {
+  heading: string;
+  caption: string;
+  metrics: Array<{
+    label: string;
+    value: string;
+  }>;
+  image: string;
+}
+
+function TractionSection({
+  heading,
+  caption,
+  metrics,
+  image,
+}: TractionSectionProps) {
+  return (
+    <section className="space-y-12">
+      <SectionHeader title={heading} caption={caption} />
+      <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
+          {metrics.map((metric) => (
+            <div
+              key={metric.label}
+              className="flex flex-col gap-2 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+            >
+              <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wide">
+                {metric.label}
+              </h3>
+              <p className="text-2xl font-bold text-gray-900">{metric.value}</p>
+            </div>
+          ))}
+        </div>
+        <div className="flex items-center justify-center">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl border border-gray-200">
+            <Image
+              src={image}
+              alt="Team in San Francisco"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
