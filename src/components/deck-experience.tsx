@@ -94,12 +94,6 @@ export function DeckExperience({ showLanguageDialog }: DeckExperienceProps) {
             contentDescription={content.pricing.content.description}
             bullets={content.pricing.content.bullets}
           />
-          <ContactSection
-            locale={locale}
-            heading={content.contact.heading}
-            caption={content.contact.caption}
-            ctas={content.contact.ctas}
-          />
         </main>
         <footer className="mt-24 flex flex-col gap-4 border-t border-gray-200 pt-8 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2">
@@ -118,11 +112,7 @@ interface HeroProps {
   primaryCta: { label: string; href: string };
 }
 
-function Hero({
-  title,
-  subtitle,
-  primaryCta,
-}: HeroProps) {
+function Hero({ title, subtitle, primaryCta }: HeroProps) {
   return (
     <section className="mx-auto max-w-4xl space-y-12 text-center">
       <div className="flex justify-center">
@@ -457,12 +447,11 @@ function MediaSection({ locale, heading, caption, items }: MediaSectionProps) {
             className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
           >
             <div className="relative aspect-video bg-gray-900">
-              <video
-                controls
-                className="h-full w-full"
-                preload="metadata"
-              >
-                <source src={videoFiles[item.label] || "/entrevista.mp4"} type="video/mp4" />
+              <video controls className="h-full w-full" preload="metadata">
+                <source
+                  src={videoFiles[item.label] || "/entrevista.mp4"}
+                  type="video/mp4"
+                />
                 Your browser does not support the video tag.
               </video>
             </div>
