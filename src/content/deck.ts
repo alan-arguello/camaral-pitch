@@ -128,7 +128,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
       members: [
         {
           name: "Samuel Santa",
-          role: "Chief Executive Officer",
+          role: "Cofounder & CEO",
           summary:
             "Founder, operator, and engineer focused on automating agency workflows.",
           highlights: [
@@ -141,7 +141,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
         },
         {
           name: "Alan Arguello",
-          role: "Chief Revenue Officer",
+          role: "Cofounder & President",
           summary:
             "Operator and builder leading CX programs, venture-backed communities, and B2B growth.",
           highlights: [
@@ -155,7 +155,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
         },
         {
           name: "Octavio Razo",
-          role: "Chief Technology Officer",
+          role: "Cofounder & CTO",
           summary:
             "Engineering leader scaling GenAI platforms for contact centers and startups.",
           highlights: [
@@ -207,6 +207,12 @@ export const deckCopy: Record<Locale, DeckContent> = {
       caption:
         "Teams across consulting, education, ecommerce, and proptech use avatars to stay close to their customers.",
       cases: [
+        {
+          client: "ANDE",
+          summary:
+            "The largest education union in Costa Rica hired us for their annual anniversary event, providing an avatar of Emma Gamboa, a deceased founder, to commemorate her in an interactive room where she explained her history in person.",
+          link: "/ande",
+        },
         {
           client: "Axel Jutoran",
           summary:
@@ -483,6 +489,12 @@ export const deckCopy: Record<Locale, DeckContent> = {
       caption:
         "Equipos de consultoría, educación, ecommerce y proptech escalan experiencias humanas con avatares.",
       cases: [
+        {
+          client: "ANDE",
+          summary:
+            "El sindicato de educación más grande de Costa Rica nos contrató para su evento de aniversario anual, proporcionando un avatar de Emma Gamboa, una fundadora fallecida, para conmemorarla en una sala interactiva donde explicó su historia en persona.",
+          link: "/ande",
+        },
         {
           client: "Axel Jutoran",
           summary:
