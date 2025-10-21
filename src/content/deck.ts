@@ -86,6 +86,14 @@ export interface DeckContent {
       bullets: string[];
     };
   };
+  investorConcerns: {
+    heading: string;
+    caption: string;
+    concerns: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
   contact: {
     heading: string;
     caption: string;
@@ -131,7 +139,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
       "Fast iteration powered by proprietary GenAI pipelines.",
     ],
     team: {
-      heading: "A founding team building out of Silicon Valley",
+      heading: "A founding team of Software Engineers",
       caption:
         "After founding companies and working at YC startups, we gained the experience to build world-class global companies.",
       members: [
@@ -196,7 +204,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
         },
         {
           label: "Raising",
-          value: "$300k USD pre-seed",
+          value: "Pre-seed",
         },
       ],
       image: "/team.jpeg",
@@ -245,6 +253,12 @@ export const deckCopy: Record<Locale, DeckContent> = {
           summary:
             "The largest education union in Costa Rica hired us for their annual anniversary event, providing an avatar of Emma Gamboa, a deceased founder, to commemorate her in an interactive room where she explained her history in person.",
           link: "/ande",
+        },
+        {
+          client: "Salvador Nasralla",
+          summary:
+            "Presidential candidate in Honduras is negotiating with us to create a cloned avatar that can be released to the general public since he loved it. The avatar will be able to display engagement metrics, retention, and social problems segmented by IP that will be helpful for his presidential campaign.",
+          link: "https://www.instagram.com/salvadornasralla/",
         },
         {
           client: "Axel Jutoran",
@@ -372,6 +386,29 @@ export const deckCopy: Record<Locale, DeckContent> = {
         ],
       },
     },
+    investorConcerns: {
+      heading: "Addressing potential investor concerns upfront",
+      caption: "Let's save you time—we know as investors you'll have concerns",
+      concerns: [
+        {
+          title:
+            "You are building a wrapper, not a foundational model company in contrast to HeyGen, ElevenLabs, etc.",
+          description:
+            "Yes, that's true, we're aware of it and that this is our biggest red flag. However, our thinking right now is that these players are providing the models, not the use cases, the advantage that we have is we're still in a market with no so much competition. Velocity is our best moat, as if we lock-up the companies and start gathering data from their uses cases it will be hard. On the other end, Octavio has had almost 10 years working at Vozy and knows deeper technically the problems faced by anyone who wants to integrate voice and video models in real-time, mostly the latency.",
+        },
+        {
+          title:
+            "The business isn't sustainable, too early to say your retention.",
+          description:
+            "Yes, we know it. Right now we're still iterating the ICP, as time passes and as we also iterate the product. We do think clients like ANDE syndicate are likely to be one-off clients or project-based, but, given our clients asks in the past weeks, we think if we add the capability to the avatar to share screen and be able to do a product demo or customer support as a human, this is one of the strongest use cases.",
+        },
+        {
+          title: "You guys seem good, but not world-class.",
+          description:
+            "Sure, if we contrast our team credentials to Stanford PhDs or ex-something, I completely agree. That being said, we have a strong network of people from our relationships like Andrés Bilbao (Rappi), Alex Torrenegra (Torre), Danielle Strachmann (Thiel Fellowship), Carlos Alzate (AI Fund), etc and previous programs we have participated like Latitud, On Deck, START Global, etc. We are not newcomers.",
+        },
+      ],
+    },
     contact: {
       heading: "Start building with Camaral",
       caption:
@@ -437,7 +474,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
       "Iteración rápida con pipelines propietarios de GenAI.",
     ],
     team: {
-      heading: "Un equipo fundador que construye desde Silicon Valley",
+      heading: "Un equipo fundador de Software Engineers",
       caption:
         "Después de fundar compañías y trabajar en startups de YC, ganamos la experiencia para crear empresas globales world-class.",
       members: [
@@ -502,7 +539,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
         },
         {
           label: "Levantando",
-          value: "$300k USD pre-seed",
+          value: "Pre-seed",
         },
       ],
       image: "/team.jpeg",
@@ -551,6 +588,12 @@ export const deckCopy: Record<Locale, DeckContent> = {
           summary:
             "El sindicato de educación más grande de Costa Rica nos contrató para su evento de aniversario anual, proporcionando un avatar de Emma Gamboa, una fundadora fallecida, para conmemorarla en una sala interactiva donde explicó su historia en persona.",
           link: "/ande",
+        },
+        {
+          client: "Salvador Nasralla",
+          summary:
+            "Candidato presidencial en Honduras está negociando con nosotros para crear un avatar clonado que pueda ser liberado al público general ya que le encantó. El avatar podrá mostrar métricas de engagement, retención y problemas sociales segmentados por IP que serán de ayuda para su campaña presidencial.",
+          link: "https://www.instagram.com/salvadornasralla/",
         },
         {
           client: "Axel Jutoran",
@@ -678,6 +721,31 @@ export const deckCopy: Record<Locale, DeckContent> = {
           "El costo final depende del nivel de personalización y la complejidad.",
         ],
       },
+    },
+    investorConcerns: {
+      heading:
+        "Abordando preocupaciones potenciales de inversionistas de antemano",
+      caption:
+        "Ahorremos tiempo—sabemos que como inversionistas tendrán preocupaciones, así que por qué no deberían invertir?",
+      concerns: [
+        {
+          title:
+            "Están construyendo un wrapper, no una compañía de modelos fundacionales en contraste con HeyGen, ElevenLabs, etc.",
+          description:
+            "Sí, es cierto, somos conscientes de ello y que este es nuestro mayor riesgo. Sin embargo, nuestro pensamiento actual es que estos jugadores están proporcionando los modelos, no los casos de uso, la ventaja que tenemos es que aún estamos en un mercado con poca competencia. La velocidad es nuestro mejor foso, ya que si bloqueamos las compañías y comenzamos a recopilar datos de sus casos de uso será difícil. Por otro lado, Octavio ha tenido casi 10 años trabajando en Vozy y conoce técnicamente en profundidad los problemas que enfrenta cualquiera que quiera integrar modelos de voz y video en tiempo real, principalmente la latencia.",
+        },
+        {
+          title:
+            "El negocio no es sostenible, demasiado temprano para decir su retención.",
+          description:
+            "Sí, lo sabemos. En este momento aún estamos iterando el ICP, a medida que pasa el tiempo y también iteramos el producto. Pensamos que clientes como el sindicato ANDE son probablemente clientes únicos o basados en proyectos, pero, dado las preguntas de nuestros clientes en las últimas semanas, pensamos que si agregamos la capacidad al avatar para compartir pantalla y poder hacer una demo de producto o soporte al cliente como un humano, este es uno de los casos de uso más fuertes.",
+        },
+        {
+          title: "Parecen buenos, pero no de clase mundial.",
+          description:
+            "Claro, si contrastamos las credenciales de nuestro equipo con PhDs de Stanford o ex-algo, estoy completamente de acuerdo. Dicho esto, tenemos una fuerte red de personas de nuestras relaciones como Andrés Bilbao (Rappi), Alex Torrenegra (Torre), Danielle Strachmann (Thiel Fellowship), Carlos Alzate (AI Fund), etc y programas previos en los que hemos participado como Latitud, On Deck, START Global, etc. No somos principiantes.",
+        },
+      ],
     },
     contact: {
       heading: "Construyamos con Camaral",

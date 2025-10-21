@@ -100,6 +100,11 @@ export function DeckExperience({ showLanguageDialog }: DeckExperienceProps) {
             contentDescription={content.pricing.content.description}
             bullets={content.pricing.content.bullets}
           />
+          <InvestorConcernsSection
+            heading={content.investorConcerns.heading}
+            caption={content.investorConcerns.caption}
+            concerns={content.investorConcerns.concerns}
+          />
         </main>
         <footer className="mt-24 flex flex-col gap-4 border-t border-gray-200 pt-8 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2">
@@ -443,15 +448,20 @@ function UseCasesSection({
 }: UseCasesSectionProps) {
   const clientImages: Record<string, string> = {
     ANDE: "/ande.jpg",
+    "Salvador Nasralla": "/salvador.jpg",
   };
 
-  const [featuredCase, ...otherCases] = cases;
+  const [firstCase, secondCase, ...otherCases] = cases;
+  const featuredCase =
+    firstCase.client === "Salvador Nasralla" ? firstCase : secondCase;
+  const otherFeaturedCase =
+    firstCase.client === "Salvador Nasralla" ? secondCase : firstCase;
 
   return (
     <section className="space-y-12">
       <SectionHeader title={heading} caption={caption} />
 
-      {/* Featured ANDE case */}
+      {/* Featured Salvador Nasralla case */}
       <article className="rounded-3xl border-2 border-[#0dc7ff] bg-gradient-to-br from-[#0dc7ff]/5 to-white p-8 shadow-lg">
         <div className="flex items-start justify-between gap-6">
           <div className="flex items-center gap-4">
@@ -476,7 +486,7 @@ function UseCasesSection({
             </div>
           </div>
           <span className="rounded-full bg-[#0dc7ff]/10 px-4 py-2 text-sm font-semibold text-[#0dc7ff]">
-            {locale === "es" ? "En vivo" : "Live"}
+            {locale === "es" ? "En negociación" : "In negotiation"}
           </span>
         </div>
         <p className="mt-6 text-lg leading-relaxed text-gray-700">
@@ -485,6 +495,49 @@ function UseCasesSection({
         <Link
           href={featuredCase.link}
           target={featuredCase.link.startsWith("http") ? "_blank" : undefined}
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#0dc7ff] px-6 py-3 font-semibold text-white transition hover:bg-[#06b6ef]"
+        >
+          {locale === "es" ? "Ver perfil" : "View profile"}
+          <span aria-hidden>↗</span>
+        </Link>
+      </article>
+
+      {/* Featured ANDE case */}
+      <article className="rounded-3xl border-2 border-[#0dc7ff] bg-gradient-to-br from-[#0dc7ff]/5 to-white p-8 shadow-lg">
+        <div className="flex items-start justify-between gap-6">
+          <div className="flex items-center gap-4">
+            {clientImages[otherFeaturedCase.client] && (
+              <div className="relative h-16 w-16 overflow-hidden rounded-xl border-2 border-gray-200">
+                <Image
+                  src={clientImages[otherFeaturedCase.client]}
+                  alt={`${otherFeaturedCase.client} logo`}
+                  width={64}
+                  height={64}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            )}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900">
+                {otherFeaturedCase.client}
+              </h3>
+              <span className="inline-flex items-center gap-2 rounded-full bg-[#0dc7ff] px-4 py-2 text-sm font-bold text-white">
+                {locale === "es" ? "Caso destacado" : "Featured case"}
+              </span>
+            </div>
+          </div>
+          <span className="rounded-full bg-[#0dc7ff]/10 px-4 py-2 text-sm font-semibold text-[#0dc7ff]">
+            {locale === "es" ? "En vivo" : "Live"}
+          </span>
+        </div>
+        <p className="mt-6 text-lg leading-relaxed text-gray-700">
+          {otherFeaturedCase.summary}
+        </p>
+        <Link
+          href={otherFeaturedCase.link}
+          target={
+            otherFeaturedCase.link.startsWith("http") ? "_blank" : undefined
+          }
           className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#0dc7ff] px-6 py-3 font-semibold text-white transition hover:bg-[#06b6ef]"
         >
           {locale === "es" ? "Ver caso" : "View case"}
@@ -589,6 +642,60 @@ interface PricingSectionProps {
   contentHeading: string;
   contentDescription: string;
   bullets: string[];
+}
+
+interface InvestorConcernsSectionProps {
+  heading: string;
+  caption: string;
+  concerns: Array<{
+    title: string;
+    description: string;
+  }>;
+}
+
+function InvestorConcernsSection({
+  heading,
+  caption,
+  concerns,
+}: InvestorConcernsSectionProps) {
+  return (
+    <section className="space-y-12">
+      <div className="text-center space-y-4">
+        <h2 className="text-5xl font-bold tracking-tight text-gray-900 lg:text-6xl">
+          {heading}
+        </h2>
+        <p className="max-w-3xl mx-auto text-xl leading-relaxed text-gray-600">
+          {caption}
+        </p>
+      </div>
+      <div className="space-y-8">
+        {concerns.map((concern, index) => (
+          <div
+            key={concern.title}
+            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 border-4 border-red-200 p-8 shadow-2xl"
+          >
+            {/* Decorative elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-red-500 rounded-full opacity-10"></div>
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-orange-500 rounded-full opacity-10"></div>
+
+            <div className="relative z-10">
+              <div className="mb-6">
+                <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-orange-500 px-6 py-3 text-sm font-bold text-white shadow-lg">
+                  🚨 Concern {index + 1}
+                </span>
+                <h3 className="mt-6 text-3xl font-bold text-gray-900 leading-tight">
+                  {concern.title}
+                </h3>
+              </div>
+              <p className="text-lg leading-relaxed text-gray-800 font-medium">
+                {concern.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 function PricingSection({
@@ -699,7 +806,7 @@ function PricingSection({
             <div className="flex flex-col justify-center rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
               <div className="mb-6 text-center">
                 <div className="mb-2 text-5xl font-bold text-[#ff55c6]">
-                  $3 USD
+                  $20 USD
                 </div>
                 <p className="text-gray-600">
                   {locale === "es"

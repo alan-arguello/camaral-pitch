@@ -195,7 +195,7 @@ export const aliadosProposalContent: AliadosProposal = {
       description:
         "Generación de contenido con avatares de IA, guiones personalizados y voces clonadas para campañas de marketing, capacitación interna o comunicación corporativa.",
       pricing: [
-        "Precios desde $3 USD por minuto finalizado",
+        "Precios desde $20 USD por minuto finalizado",
         "El costo final depende del nivel de personalización y la complejidad de producción",
       ],
     },
@@ -274,8 +274,7 @@ export const aliadosProposalContent: AliadosProposal = {
   },
   team: {
     heading: "Nuestro Equipo",
-    caption:
-      "Un equipo fundador que construye desde Silicon Valley con experiencia en startups de Y Combinator y empresas globales.",
+    caption: "Un equipo fundador totalmente técnico",
     members: [
       {
         name: "Samuel Santa",
