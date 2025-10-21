@@ -392,7 +392,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
       concerns: [
         {
           title:
-            "You are building a wrapper, not a foundational model company in contrast to HeyGen, ElevenLabs, etc.",
+            "You are building a wrapper, a foundational model which are your providers company like HeyGen, ElevenLabs, etc. will kill you",
           description:
             "Yes, that's true, we're aware of it and that this is our biggest red flag. However, our thinking right now is that these players are providing the models, not the use cases, the advantage that we have is we're still in a market with no so much competition. Velocity is our best moat, as if we lock-up the companies and start gathering data from their uses cases it will be hard. On the other end, Octavio has had almost 10 years working at Vozy and knows deeper technically the problems faced by anyone who wants to integrate voice and video models in real-time, mostly the latency.",
         },
@@ -730,7 +730,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
       concerns: [
         {
           title:
-            "Están construyendo un wrapper, no una compañía de modelos fundacionales en contraste con HeyGen, ElevenLabs, etc.",
+            "Están construyendo un wrapper, una compañía de modelos fundacionales como sus proveedores HeyGen, ElevenLabs, etc. los matará",
           description:
             "Sí, es cierto, somos conscientes de ello y que este es nuestro mayor riesgo. Sin embargo, nuestro pensamiento actual es que estos jugadores están proporcionando los modelos, no los casos de uso, la ventaja que tenemos es que aún estamos en un mercado con poca competencia. La velocidad es nuestro mejor foso, ya que si bloqueamos las compañías y comenzamos a recopilar datos de sus casos de uso será difícil. Por otro lado, Octavio ha tenido casi 10 años trabajando en Vozy y conoce técnicamente en profundidad los problemas que enfrenta cualquiera que quiera integrar modelos de voz y video en tiempo real, principalmente la latencia.",
         },
