@@ -687,7 +687,7 @@ function InvestorConcernsSection({
                   {concern.title}
                 </h3>
               </div>
-              <p className="text-lg leading-relaxed text-gray-800 font-medium">
+              <p className="text-lg leading-relaxed text-gray-800 font-medium whitespace-pre-line">
                 {concern.description}
               </p>
             </div>
