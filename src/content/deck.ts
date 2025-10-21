@@ -413,6 +413,11 @@ export const deckCopy: Record<Locale, DeckContent> = {
           description:
             "No, not really. Our long-term vision focuses on deep specialization in use cases rather than building foundational models, which require massive capital few can raise.\n\nWe've studied two market entry paths: foundational models or specializing in valuable business use cases. Examples like AI-powered IDEs (Cursor received an acquisition offer, Windsor was acquired) show success as 'wrappers' with exceptional UI/UX that boost productivity.\n\nOur approach mirrors this: specialize so deeply that displacement becomes difficult. This turns giants like OpenAI from threats into potential allies—or even acquirers, if they see value in our solution or team.\n\nMarket research in San Francisco and LATAM communities reveals most GenAI focus is on marketing, with few real-time video/voice solutions due to complexity. We have early advantages in this young market, with competitive edges and existing clients.",
         },
+        {
+          title: "You guys are too early",
+          description:
+            "Please give us the feedback why you don’t think we are worth it at this moment. We have worked with investors, and we know that any investor who thinks a company is too early simply means we haven’t hit the milestones you think are the minimum for you to derisk on your head an investment.\n\nWe really want the real feedback from you.",
+        },
       ],
     },
     contact: {
@@ -756,6 +761,11 @@ export const deckCopy: Record<Locale, DeckContent> = {
             "Son un wrapper—gigantes como OpenAI los aplastarán. ¿Cuál es la visión a largo plazo?",
           description:
             "No, no realmente. Nuestra visión a largo plazo se centra en especializarnos profundamente en casos de uso en lugar de construir modelos fundacionales, que requieren capital masivo que pocos pueden levantar.\n\nHemos estudiado dos caminos para entrar al mercado: modelos fundacionales o especializarse en casos de uso valiosos para el negocio. Ejemplos como IDEs con IA (Cursor recibió una oferta de adquisición, Windsor fue adquirido) muestran éxito como 'wrappers' con UI/UX excepcional que aumenta la productividad.\n\nNuestro enfoque refleja esto: especializarnos tanto que el desplazamiento sea difícil. Esto convierte a gigantes como OpenAI de amenazas en aliados potenciales—o incluso adquirientes, si ven valor en nuestra solución o equipo.\n\nLa investigación de mercado en comunidades de San Francisco y Latinoamérica revela que la mayoría del enfoque en GenAI está en marketing, con pocas soluciones de video y voz en tiempo real debido a la complejidad. Tenemos ventajas tempranas en este mercado joven, con bordes competitivos y clientes existentes.",
+        },
+        {
+          title: "Son demasiado tempranos",
+          description:
+            "Por favor dennos la retroalimentación por qué no piensan que valemos la pena en este momento. Hemos trabajado con inversionistas, y sabemos que cualquier inversionista que piensa que una compañía está demasiado temprano simplemente significa que no hemos alcanzado los hitos que ustedes piensan son el mínimo para que derisken su cabeza en una inversión.\n\nRealmente queremos la retroalimentación real de ustedes.",
         },
       ],
     },
