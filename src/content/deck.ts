@@ -255,12 +255,6 @@ export const deckCopy: Record<Locale, DeckContent> = {
           link: "/ande",
         },
         {
-          client: "Salvador Nasralla",
-          summary:
-            "Presidential candidate in Honduras is negotiating with us to create a cloned avatar that can be released to the general public since he loved it. The avatar will be able to display engagement metrics, retention, and social problems segmented by IP that will be helpful for his presidential campaign.",
-          link: "https://www.instagram.com/salvadornasralla/",
-        },
-        {
           client: "Axel Jutoran",
           summary:
             "Creator with 180k+ followers clones himself with Camaral to qualify inbound leads and concentrate on premium engagements.",
@@ -287,7 +281,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
         {
           client: "Next Generation",
           summary:
-            "Andrés Bilbao’s program scales parent onboarding with his Camaral avatar answering questions instantly.",
+            "Andrés Bilbao's program scales parent onboarding with his Camaral avatar answering questions instantly.",
           link: "https://nextgen.build/",
         },
         {
@@ -599,12 +593,6 @@ export const deckCopy: Record<Locale, DeckContent> = {
           summary:
             "El sindicato de educación más grande de Costa Rica nos contrató para su evento de aniversario anual, proporcionando un avatar de Emma Gamboa, una fundadora fallecida, para conmemorarla en una sala interactiva donde explicó su historia en persona.",
           link: "/ande",
-        },
-        {
-          client: "Salvador Nasralla",
-          summary:
-            "Candidato presidencial en Honduras está negociando con nosotros para crear un avatar clonado que pueda ser liberado al público general ya que le encantó. El avatar podrá mostrar métricas de engagement, retención y problemas sociales segmentados por IP que serán de ayuda para su campaña presidencial.",
-          link: "https://www.instagram.com/salvadornasralla/",
         },
         {
           client: "Axel Jutoran",

@@ -8,9 +8,17 @@ import { locales, type Locale } from "@/content/deck";
 
 interface DeckExperienceProps {
   showLanguageDialog: boolean;
+  showTraction?: boolean;
+  showInvestors?: boolean;
+  showInvestorConcerns?: boolean;
 }
 
-export function DeckExperience({ showLanguageDialog }: DeckExperienceProps) {
+export function DeckExperience({
+  showLanguageDialog,
+  showTraction = true,
+  showInvestors = true,
+  showInvestorConcerns = true,
+}: DeckExperienceProps) {
   const { content, locale, setLocale, isPending } = useLanguage();
   const [languageDialogOpen, setLanguageDialogOpen] =
     useState(showLanguageDialog);
@@ -66,19 +74,23 @@ export function DeckExperience({ showLanguageDialog }: DeckExperienceProps) {
             caption={content.team.caption}
             members={content.team.members}
           />
-          <TractionSection
-            heading={content.traction.heading}
-            caption={content.traction.caption}
-            metrics={content.traction.metrics}
-            image={content.traction.image}
-          />
+          {showTraction && (
+            <TractionSection
+              heading={content.traction.heading}
+              caption={content.traction.caption}
+              metrics={content.traction.metrics}
+              image={content.traction.image}
+            />
+          )}
           <CompaniesCarousel />
-          <InvestorsSection
-            locale={locale}
-            heading={content.investors.heading}
-            caption={content.investors.caption}
-            investors={content.investors.people}
-          />
+          {showInvestors && (
+            <InvestorsSection
+              locale={locale}
+              heading={content.investors.heading}
+              caption={content.investors.caption}
+              investors={content.investors.people}
+            />
+          )}
           <UseCasesSection
             locale={locale}
             heading={content.useCases.heading}
@@ -100,11 +112,13 @@ export function DeckExperience({ showLanguageDialog }: DeckExperienceProps) {
             contentDescription={content.pricing.content.description}
             bullets={content.pricing.content.bullets}
           />
-          <InvestorConcernsSection
-            heading={content.investorConcerns.heading}
-            caption={content.investorConcerns.caption}
-            concerns={content.investorConcerns.concerns}
-          />
+          {showInvestorConcerns && (
+            <InvestorConcernsSection
+              heading={content.investorConcerns.heading}
+              caption={content.investorConcerns.caption}
+              concerns={content.investorConcerns.concerns}
+            />
+          )}
         </main>
         <footer className="mt-24 flex flex-col gap-4 border-t border-gray-200 pt-8 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2">
@@ -145,14 +159,23 @@ function Hero({ title, subtitle, primaryCta }: HeroProps) {
         </p>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-4">
-        <Link
-          href={primaryCta.href}
-          target="_blank"
-          className="inline-flex items-center gap-2 rounded-full bg-[#0dc7ff] px-6 py-3 font-semibold text-white transition hover:bg-[#06b6ef]"
-        >
-          {primaryCta.label}
-        </Link>
+      <div className="flex flex-col items-center gap-8">
+        <div className="relative aspect-video w-full max-w-2xl overflow-hidden rounded-2xl border border-gray-200">
+          <video controls className="h-full w-full" preload="metadata">
+            <source src="/bilbao.MP4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <Link
+            href={primaryCta.href}
+            target="_blank"
+            className="inline-flex items-center gap-2 rounded-full bg-[#0dc7ff] px-6 py-3 font-semibold text-white transition hover:bg-[#06b6ef]"
+          >
+            {primaryCta.label}
+          </Link>
+        </div>
       </div>
     </section>
   );
