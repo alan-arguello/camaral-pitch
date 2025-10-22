@@ -22,7 +22,7 @@ export default async function Demo({ searchParams }: DemoPageProps) {
       <DeckExperience
         showLanguageDialog={!hasLocaleInUrl}
         showTraction={false}
-        showInvestors={false}
+        showInvestors={true}
         showInvestorConcerns={false}
       />
     </LanguageProvider>
