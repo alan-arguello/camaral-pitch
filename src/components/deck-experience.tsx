@@ -474,17 +474,14 @@ function UseCasesSection({
     "Salvador Nasralla": "/salvador.jpg",
   };
 
-  const [firstCase, secondCase, ...otherCases] = cases;
-  const featuredCase =
-    firstCase.client === "Salvador Nasralla" ? firstCase : secondCase;
-  const otherFeaturedCase =
-    firstCase.client === "Salvador Nasralla" ? secondCase : firstCase;
+  const [firstCase, ...otherCases] = cases;
+  const featuredCase = firstCase; // ANDE is the first case
 
   return (
     <section className="space-y-12">
       <SectionHeader title={heading} caption={caption} />
 
-      {/* Featured Salvador Nasralla case */}
+      {/* Featured ANDE case */}
       <article className="rounded-3xl border-2 border-[#0dc7ff] bg-gradient-to-br from-[#0dc7ff]/5 to-white p-8 shadow-lg">
         <div className="flex items-start justify-between gap-6">
           <div className="flex items-center gap-4">
@@ -509,7 +506,7 @@ function UseCasesSection({
             </div>
           </div>
           <span className="rounded-full bg-[#0dc7ff]/10 px-4 py-2 text-sm font-semibold text-[#0dc7ff]">
-            {locale === "es" ? "En negociación" : "In negotiation"}
+            {locale === "es" ? "En vivo" : "Live"}
           </span>
         </div>
         <p className="mt-6 text-lg leading-relaxed text-gray-700">
@@ -518,49 +515,6 @@ function UseCasesSection({
         <Link
           href={featuredCase.link}
           target={featuredCase.link.startsWith("http") ? "_blank" : undefined}
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#0dc7ff] px-6 py-3 font-semibold text-white transition hover:bg-[#06b6ef]"
-        >
-          {locale === "es" ? "Ver perfil" : "View profile"}
-          <span aria-hidden>↗</span>
-        </Link>
-      </article>
-
-      {/* Featured ANDE case */}
-      <article className="rounded-3xl border-2 border-[#0dc7ff] bg-gradient-to-br from-[#0dc7ff]/5 to-white p-8 shadow-lg">
-        <div className="flex items-start justify-between gap-6">
-          <div className="flex items-center gap-4">
-            {clientImages[otherFeaturedCase.client] && (
-              <div className="relative h-16 w-16 overflow-hidden rounded-xl border-2 border-gray-200">
-                <Image
-                  src={clientImages[otherFeaturedCase.client]}
-                  alt={`${otherFeaturedCase.client} logo`}
-                  width={64}
-                  height={64}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            )}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900">
-                {otherFeaturedCase.client}
-              </h3>
-              <span className="inline-flex items-center gap-2 rounded-full bg-[#0dc7ff] px-4 py-2 text-sm font-bold text-white">
-                {locale === "es" ? "Caso destacado" : "Featured case"}
-              </span>
-            </div>
-          </div>
-          <span className="rounded-full bg-[#0dc7ff]/10 px-4 py-2 text-sm font-semibold text-[#0dc7ff]">
-            {locale === "es" ? "En vivo" : "Live"}
-          </span>
-        </div>
-        <p className="mt-6 text-lg leading-relaxed text-gray-700">
-          {otherFeaturedCase.summary}
-        </p>
-        <Link
-          href={otherFeaturedCase.link}
-          target={
-            otherFeaturedCase.link.startsWith("http") ? "_blank" : undefined
-          }
           className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#0dc7ff] px-6 py-3 font-semibold text-white transition hover:bg-[#06b6ef]"
         >
           {locale === "es" ? "Ver caso" : "View case"}
