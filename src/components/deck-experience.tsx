@@ -108,9 +108,6 @@ export function DeckExperience({
             heading={content.pricing.interactive.heading}
             caption={content.pricing.interactive.caption}
             plans={content.pricing.interactive.plans}
-            contentHeading={content.pricing.content.heading}
-            contentDescription={content.pricing.content.description}
-            bullets={content.pricing.content.bullets}
           />
           {showInvestorConcerns && (
             <InvestorConcernsSection
@@ -341,7 +338,18 @@ function TractionSection({
               <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wide">
                 {metric.label}
               </h3>
-              <p className="text-2xl font-bold text-gray-900">{metric.value}</p>
+              <div className="text-2xl font-bold text-gray-900 whitespace-pre-line">
+                {metric.value.split("\n").map((line, index) => (
+                  <div
+                    key={index}
+                    className={
+                      index === 0 ? "text-2xl" : "text-sm text-gray-600"
+                    }
+                  >
+                    {line}
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -509,9 +517,17 @@ function UseCasesSection({
             {locale === "es" ? "En vivo" : "Live"}
           </span>
         </div>
-        <p className="mt-6 text-lg leading-relaxed text-gray-700">
-          {featuredCase.summary}
-        </p>
+        <div className="mt-6 grid gap-6 lg:grid-cols-2 items-center">
+          <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-gray-200">
+            <video controls className="h-full w-full" preload="metadata">
+              <source src="/ande.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p className="text-lg leading-relaxed text-gray-700">
+            {featuredCase.summary}
+          </p>
+        </div>
         <Link
           href={featuredCase.link}
           target={featuredCase.link.startsWith("http") ? "_blank" : undefined}
@@ -523,7 +539,7 @@ function UseCasesSection({
       </article>
 
       {/* Other cases */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {otherCases.map((useCase) => (
           <article
             key={useCase.client}
@@ -616,9 +632,6 @@ interface PricingSectionProps {
     description: string;
     perks: string[];
   }>;
-  contentHeading: string;
-  contentDescription: string;
-  bullets: string[];
 }
 
 interface InvestorConcernsSectionProps {
@@ -680,9 +693,6 @@ function PricingSection({
   heading,
   caption,
   plans,
-  contentHeading,
-  contentDescription,
-  bullets,
 }: PricingSectionProps) {
   return (
     <section id="pricing" className="space-y-16">
@@ -690,8 +700,8 @@ function PricingSection({
         title={locale === "es" ? "Precios" : "Pricing"}
         caption={
           locale === "es"
-            ? "Dos productos potentes para diferentes necesidades"
-            : "Two powerful products for different needs"
+            ? "Un producto potente para diferentes necesidades"
+            : "One powerful product for different needs"
         }
       />
 
@@ -745,62 +755,6 @@ function PricingSection({
                 </Link>
               </article>
             ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Product 2: AI Content Generation */}
-      <div className="space-y-8">
-        <div className="rounded-3xl border-2 border-[#ff55c6] bg-gradient-to-br from-[#ff55c6]/5 to-white p-8">
-          <div className="mb-6">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#ff55c6] px-4 py-2 text-sm font-bold text-white">
-              {locale === "es" ? "Producto 2" : "Product 2"}
-            </span>
-            <h3 className="mt-4 text-3xl font-bold text-gray-900">
-              {contentHeading}
-            </h3>
-            <p className="mt-2 text-gray-600">{contentDescription}</p>
-          </div>
-
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-              <h4 className="mb-4 text-xl font-bold text-gray-900">
-                {locale === "es" ? "Características" : "Features"}
-              </h4>
-              <ul className="space-y-3 text-sm text-gray-700">
-                {bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-2">
-                    <span
-                      className="mt-1.5 inline-flex h-1.5 w-1.5 flex-none rounded-full bg-[#ff55c6]"
-                      aria-hidden
-                    />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex flex-col justify-center rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-              <div className="mb-6 text-center">
-                <div className="mb-2 text-5xl font-bold text-[#ff55c6]">
-                  $20 USD
-                </div>
-                <p className="text-gray-600">
-                  {locale === "es"
-                    ? "por minuto finalizado"
-                    : "per finished minute"}
-                </p>
-              </div>
-              <Link
-                href="mailto:a@camaral.ai"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#ff55c6] px-6 py-3 font-semibold text-white transition hover:bg-[#e04bb3]"
-              >
-                {locale === "es"
-                  ? "Solicita una cotización"
-                  : "Request a quote"}
-                <span aria-hidden>→</span>
-              </Link>
-            </div>
           </div>
         </div>
       </div>

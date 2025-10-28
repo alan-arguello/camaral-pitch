@@ -80,11 +80,6 @@ export interface DeckContent {
         perks: string[];
       }>;
     };
-    content: {
-      heading: string;
-      description: string;
-      bullets: string[];
-    };
   };
   investorConcerns: {
     heading: string;
@@ -151,14 +146,14 @@ export const deckCopy: Record<Locale, DeckContent> = {
           highlights: [
             "Founder & CEO of Suuper, the operating system for agencies backed by Andrés Bilbao.",
             "Co-founder & CTO of Grayola, scaled subscription design to $250k ARR in 18 months without funding.",
-            "Software engineer at Accenture delivering enterprise CX solutions.",
-            "Bachelor’s in Computer Science.",
+            "Software engineer at Accenture.",
+            "Bachelor's in Computer Science.",
           ],
           linkedin: "https://www.linkedin.com/in/devsanta/",
         },
         {
           name: "Alan Arguello",
-          role: "Cofounder & President",
+          role: "Cofounder & CRO",
           summary:
             "Operator and builder leading CX programs, venture-backed communities, and B2B growth.",
           highlights: [
@@ -166,7 +161,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
             "Founding team at Makers Fellowship with Rappi co-founder Andrés Bilbao.",
             "Co-founder at Trendi (Platanus Ventures), launched education products to $85k ARR.",
             "Software engineer at Beek (YC W17) and National Western Life Insurance.",
-            "Bachelor’s in Electrical Engineering and MBA.",
+            "Bachelor's in Electrical Engineering and MBA.",
           ],
           linkedin: "https://www.linkedin.com/in/alan-arguello/",
         },
@@ -195,12 +190,8 @@ export const deckCopy: Record<Locale, DeckContent> = {
           value: "First week of October",
         },
         {
-          label: "First paid clients",
-          value: "7 ($250 MRR)",
-        },
-        {
-          label: "One-off revenue",
-          value: "$1,800 USD",
+          label: "Revenue",
+          value: "$2,163\n$1,800 one-off\n$363 MRR",
         },
         {
           label: "Raising",
@@ -252,7 +243,25 @@ export const deckCopy: Record<Locale, DeckContent> = {
           client: "ANDE",
           summary:
             "The largest education union in Costa Rica hired us for their annual anniversary event, providing an avatar of Emma Gamboa, a deceased founder, to commemorate her in an interactive room where she explained her history in person.",
-          link: "/ande",
+          link: "https://www.facebook.com/ANDECOSTARICA/posts/pfbid02EuJ8BiQxYTcATNnGZUN9mApE8g9uxDiRv5Jijbi9yKds4jzPgrugn4e9NKQaqfv8l?rdid=tdN5zlMbiZ3hs49x&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1BYRvjYAoR%2F",
+        },
+        {
+          client: "Signa",
+          summary:
+            "Legaltech company for finding companies that may infringe IP. With Camaral, Jessica, head of sales, pre-qualifies leads.",
+          link: "https://www.signaip.com/",
+        },
+        {
+          client: "Bewe",
+          summary:
+            "Natalia, sales director, uses Camaral to make sales processes more efficient, where she had to connect to 3-5 minute calls constantly to resolve simple doubts, now done with her avatar.",
+          link: "https://www.bewe.io/",
+        },
+        {
+          client: "HeyBrandee",
+          summary:
+            "Branding company for businesses. With Camaral, Camila, their CEO, can scale personalized customer attention.",
+          link: "https://www.heybrandee.com/",
         },
         {
           client: "Axel Jutoran",
@@ -284,12 +293,6 @@ export const deckCopy: Record<Locale, DeckContent> = {
             "Andrés Bilbao's program scales parent onboarding with his Camaral avatar answering questions instantly.",
           link: "https://nextgen.build/",
         },
-        {
-          client: "Trazo",
-          summary:
-            "Consultancy produces training content by cloning their CEO, reducing production from months to weeks.",
-          link: "https://www.trazo.pro/",
-        },
       ],
     },
     media: {
@@ -318,12 +321,12 @@ export const deckCopy: Record<Locale, DeckContent> = {
         plans: [
           {
             name: "Starter",
-            price: "$39/mo",
+            price: "$49/mo",
             description:
               "Ideal for solo operators and small teams introducing AI automation.",
             perks: [
               "1 AI avatar",
-              "100 minutes per month",
+              "175 minutes per month",
               "$0.25 per extra minute",
               "Core integrations",
             ],
@@ -370,15 +373,6 @@ export const deckCopy: Record<Locale, DeckContent> = {
           },
         ],
       },
-      content: {
-        heading: "AI-powered content production",
-        description:
-          "End-to-end avatar-led content with bespoke scripting, voices, and delivery.",
-        bullets: [
-          "Pricing starts at $3 USD per finished minute.",
-          "Final cost depends on customization depth and production complexity.",
-        ],
-      },
     },
     investorConcerns: {
       heading: "Addressing potential investor concerns upfront",
@@ -399,7 +393,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
         {
           title: "You guys seem good, but not world-class.",
           description:
-            "Sure, if we contrast our team credentials to Stanford PhDs or ex-something, I completely agree. That being said, we have a strong network of people from our relationships like Andrés Bilbao (Rappi), Alex Torrenegra (Torre), Danielle Strachmann (Thiel Fellowship), Carlos Alzate (AI Fund), etc and previous programs we have participated like Latitud, On Deck, START Global, etc. We are not newcomers.",
+            "Sure, if we contrast our team credentials to Stanford PhDs or ex-something, we completely agree. That being said, we have a strong network of people from our relationships like Andrés Bilbao (Rappi), Alex Torrenegra (Torre), Danielle Strachmann (Thiel Fellowship), Carlos Alzate (AI Fund), etc and previous programs we have participated like Latitud, On Deck, START Global, etc. We are not newcomers.",
         },
         {
           title:
@@ -491,7 +485,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
           highlights: [
             "Founder & CEO de Suuper, el sistema operativo para agencias respaldado por Andrés Bilbao.",
             "Co-founder & CTO de Grayola, escaló el servicio de diseño a $250k ARR en 18 meses sin inversión.",
-            "Software engineer en Accenture implementando soluciones de CX.",
+            "Software engineer en Accenture.",
             "Licenciatura en Ciencias de la Computación.",
           ],
           linkedin: "https://www.linkedin.com/in/devsanta/",
@@ -535,12 +529,8 @@ export const deckCopy: Record<Locale, DeckContent> = {
           value: "Primera semana de octubre",
         },
         {
-          label: "Primeros clientes pagados",
-          value: "7 ($250 MRR)",
-        },
-        {
-          label: "Ingresos únicos",
-          value: "$1,800 USD",
+          label: "Ingresos",
+          value: "$2,163\n$1,800 únicos\n$363 MRR",
         },
         {
           label: "Levantando",
@@ -592,7 +582,25 @@ export const deckCopy: Record<Locale, DeckContent> = {
           client: "ANDE",
           summary:
             "El sindicato de educación más grande de Costa Rica nos contrató para su evento de aniversario anual, proporcionando un avatar de Emma Gamboa, una fundadora fallecida, para conmemorarla en una sala interactiva donde explicó su historia en persona.",
-          link: "/ande",
+          link: "https://www.facebook.com/ANDECOSTARICA/posts/pfbid02EuJ8BiQxYTcATNnGZUN9mApE8g9uxDiRv5Jijbi9yKds4jzPgrugn4e9NKQaqfv8l?rdid=tdN5zlMbiZ3hs49x&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1BYRvjYAoR%2F",
+        },
+        {
+          client: "Signa",
+          summary:
+            "Legaltech para encontrar empresas que puedan infringir IP. Con Camaral, Jessica la encargada de ventas, pre-califica leads.",
+          link: "https://www.signaip.com/",
+        },
+        {
+          client: "Bewe",
+          summary:
+            "Natalia la directora de ventas usa Camaral para hacer más eficientes sus procesos de ventas, donde tenía que conectarse a llamadas de 3 a 5 minutos constantemente para resolver dudas simples, ahora lo hace con su avatar.",
+          link: "https://www.bewe.io/",
+        },
+        {
+          client: "HeyBrandee",
+          summary:
+            "Empresa de branding para empresas. Con Camaral Camila, su CEO puede escalar la atención al cliente personalizada.",
+          link: "https://www.heybrandee.com/",
         },
         {
           client: "Axel Jutoran",
@@ -624,12 +632,6 @@ export const deckCopy: Record<Locale, DeckContent> = {
             "Programa de Andrés Bilbao escala el onboarding de padres con su avatar respondiendo dudas al instante.",
           link: "https://nextgen.build/",
         },
-        {
-          client: "Trazo",
-          summary:
-            "Consultora produce capacitación interna clonando a su CEO y reduce producción de meses a semanas.",
-          link: "https://www.trazo.pro/",
-        },
       ],
     },
     media: {
@@ -659,12 +661,12 @@ export const deckCopy: Record<Locale, DeckContent> = {
         plans: [
           {
             name: "Inicial",
-            price: "$39/mes",
+            price: "$49/mes",
             description:
               "Ideal para solopreneurs y equipos pequeños que empiezan con automatización IA.",
             perks: [
               "1 avatar de IA",
-              "100 minutos por mes",
+              "175 minutos por mes",
               "$0.25 por minuto adicional",
               "Integraciones básicas",
             ],
@@ -711,15 +713,6 @@ export const deckCopy: Record<Locale, DeckContent> = {
           },
         ],
       },
-      content: {
-        heading: "Generación de contenido con IA",
-        description:
-          "Producción integral con avatares, guiones, voces y entregables personalizados.",
-        bullets: [
-          "Precios desde $3 USD por minuto finalizado.",
-          "El costo final depende del nivel de personalización y la complejidad.",
-        ],
-      },
     },
     investorConcerns: {
       heading:
@@ -742,7 +735,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
         {
           title: "Parecen buenos, pero no de clase mundial.",
           description:
-            "Claro, si contrastamos las credenciales de nuestro equipo con PhDs de Stanford o ex-algo, estoy completamente de acuerdo. Dicho esto, tenemos una fuerte red de personas de nuestras relaciones como Andrés Bilbao (Rappi), Alex Torrenegra (Torre), Danielle Strachmann (Thiel Fellowship), Carlos Alzate (AI Fund), etc y programas previos en los que hemos participado como Latitud, On Deck, START Global, etc. No somos principiantes.",
+            "Claro, si contrastamos las credenciales de nuestro equipo con PhDs de Stanford o ex-algo, estamos completamente de acuerdo. Dicho esto, tenemos una fuerte red de personas de nuestras relaciones como Andrés Bilbao (Rappi), Alex Torrenegra (Torre), Danielle Strachmann (Thiel Fellowship), Carlos Alzate (AI Fund), etc y programas previos en los que hemos participado como Latitud, On Deck, START Global, etc. No somos principiantes.",
         },
         {
           title:
