@@ -651,33 +651,33 @@ function InvestorConcernsSection({
   return (
     <section className="space-y-12">
       <div className="text-center space-y-4">
-        <h2 className="text-5xl font-bold tracking-tight text-gray-900 lg:text-6xl">
+        <h2 className="text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl">
           {heading}
         </h2>
-        <p className="max-w-3xl mx-auto text-xl leading-relaxed text-gray-600">
+        <p className="max-w-3xl mx-auto text-lg leading-relaxed text-gray-600">
           {caption}
         </p>
       </div>
-      <div className="space-y-8">
+      <div className="space-y-6">
         {concerns.map((concern, index) => (
           <div
             key={concern.title}
-            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 border-4 border-red-200 p-8 shadow-2xl"
+            className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 border-2 border-red-200 p-6 shadow-lg"
           >
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-red-500 rounded-full opacity-10"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-orange-500 rounded-full opacity-10"></div>
+            <div className="absolute -top-2 -right-2 w-16 h-16 bg-red-500 rounded-full opacity-10"></div>
+            <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-orange-500 rounded-full opacity-10"></div>
 
             <div className="relative z-10">
-              <div className="mb-6">
-                <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-orange-500 px-6 py-3 text-sm font-bold text-white shadow-lg">
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-orange-500 px-4 py-2 text-xs font-bold text-white shadow-md">
                   🚨 Concern {index + 1}
                 </span>
-                <h3 className="mt-6 text-3xl font-bold text-gray-900 leading-tight">
+                <h3 className="mt-4 text-2xl font-bold text-gray-900 leading-tight">
                   {concern.title}
                 </h3>
               </div>
-              <p className="text-lg leading-relaxed text-gray-800 font-medium whitespace-pre-line">
+              <p className="text-base leading-relaxed text-gray-800 font-medium whitespace-pre-line">
                 {concern.description}
               </p>
             </div>
