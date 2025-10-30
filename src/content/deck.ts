@@ -157,6 +157,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
           summary:
             "Operator and builder leading CX programs, venture-backed communities, and B2B growth.",
           highlights: [
+            "Partner at Bunny Inc: Data Collection, Labeling and Evals for AI Labs",
             "Co-founded a founder support program with Alexander Torrenegra, grew to $250k ARR bootstrapped.",
             "Founding team at Makers Fellowship with Rappi co-founder Andrés Bilbao.",
             "Co-founder at Trendi (Platanus Ventures), launched education products to $85k ARR.",
@@ -496,6 +497,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
           summary:
             "Operador y builder liderando programas de CX, comunidades venture y crecimiento B2B.",
           highlights: [
+            "Partner en Bunny Inc: Recolección de Datos, Etiquetado y Evaluaciones para Labs de IA",
             "Co-fundó un programa para founders bootstrapped con Alexander Torrenegra, alcanzando $250k ARR.",
             "Equipo fundador en Makers Fellowship junto al cofundador de Rappi, Andrés Bilbao.",
             "Co-founder en Trendi (Platanus Ventures), lanzó productos educativos a $85k ARR.",
