@@ -389,18 +389,12 @@ export const deckCopy: Record<Locale, DeckContent> = {
           title:
             "The business isn't sustainable, too early to say your retention.",
           description:
-            "Yes, we know—we launched just two weeks ago.\n\nHowever, we've made strong progress: we already have paying customers. The ICP isn't fully defined yet, and we're iterating on it.\n\nAt this stage, our goal is to demonstrate our ability to iterate quickly, with strong business and technical capabilities. We can close sales and build MVPs that companies of various sizes are willing to pay for.\n\nUltimately, while we see huge market opportunity, execution matters most. We're confident in our world-class team and ability to succeed in any business.",
+            "Yes, we know—we launched three weeks ago.\n\nHowever, we've made strong progress: we already have paying customers. The ICP isn't fully defined yet, and we're iterating on it.\n\nAt this stage, our goal is to demonstrate our ability to iterate quickly, with strong business and technical capabilities. We can close sales and build MVPs that companies of various sizes are willing to pay for.\n\nUltimately, while we see huge market opportunity, execution matters most. We're confident in our world-class team and ability to succeed in any business.",
         },
         {
           title: "You guys seem good, but not world-class.",
           description:
             "Sure, if we contrast our team credentials to Stanford PhDs or ex-something, we completely agree. That being said, we have a strong network of people from our relationships like Andrés Bilbao (Rappi), Alex Torrenegra (Torre), Danielle Strachmann (Thiel Fellowship), Carlos Alzate (AI Fund), etc and previous programs we have participated like Latitud, On Deck, START Global, etc. We are not newcomers.",
-        },
-        {
-          title:
-            "You're a wrapper—giants like OpenAI will crush you. What's the long-term vision?",
-          description:
-            "No, not really. Our long-term vision focuses on deep specialization in use cases rather than building foundational models, which require massive capital few can raise.\n\nWe've studied two market entry paths: foundational models or specializing in valuable business use cases. Examples like AI-powered IDEs (Cursor received an acquisition offer, Windsor was acquired) show success as 'wrappers' with exceptional UI/UX that boost productivity.\n\nOur approach mirrors this: specialize so deeply that displacement becomes difficult. This turns giants like OpenAI from threats into potential allies—or even acquirers, if they see value in our solution or team.\n\nMarket research in San Francisco and LATAM communities reveals most GenAI focus is on marketing, with few real-time video/voice solutions due to complexity. We have early advantages in this young market, with competitive edges and existing clients.",
         },
         {
           title: "You guys are too early",
@@ -732,18 +726,12 @@ export const deckCopy: Record<Locale, DeckContent> = {
           title:
             "El negocio no es sostenible, demasiado temprano para decir su retención.",
           description:
-            "Sí, lo sabemos—lanzamos hace apenas dos semanas.\n\nSin embargo, hemos avanzado mucho: ya tenemos clientes pagando. El ICP no está claro aún, y lo estamos iterando.\n\nEn esta etapa, nuestro objetivo es demostrar nuestra capacidad para iterar rápidamente, con fuertes habilidades comerciales y técnicas. Podemos cerrar ventas y construir MVPs que compañías de diversos tamaños estén dispuestas a pagar.\n\nEn definitiva, aunque vemos gran oportunidad en el mercado, la ejecución es clave. Confiamos en nuestro equipo de clase mundial y en nuestra capacidad para triunfar en cualquier negocio.",
+            "Sí, lo sabemos—lanzamos hace tres semanas.\n\nSin embargo, hemos avanzado mucho: ya tenemos clientes pagando. El ICP no está claro aún, y lo estamos iterando.\n\nEn esta etapa, nuestro objetivo es demostrar nuestra capacidad para iterar rápidamente, con fuertes habilidades comerciales y técnicas. Podemos cerrar ventas y construir MVPs que compañías de diversos tamaños estén dispuestas a pagar.\n\nEn definitiva, aunque vemos gran oportunidad en el mercado, la ejecución es clave. Confiamos en nuestro equipo de clase mundial y en nuestra capacidad para triunfar en cualquier negocio.",
         },
         {
           title: "Parecen buenos, pero no de clase mundial.",
           description:
             "Claro, si contrastamos las credenciales de nuestro equipo con PhDs de Stanford o ex-algo, estamos completamente de acuerdo. Dicho esto, tenemos una fuerte red de personas de nuestras relaciones como Andrés Bilbao (Rappi), Alex Torrenegra (Torre), Danielle Strachmann (Thiel Fellowship), Carlos Alzate (AI Fund), etc y programas previos en los que hemos participado como Latitud, On Deck, START Global, etc. No somos principiantes.",
-        },
-        {
-          title:
-            "Son un wrapper—gigantes como OpenAI los aplastarán. ¿Cuál es la visión a largo plazo?",
-          description:
-            "No, no realmente. Nuestra visión a largo plazo se centra en especializarnos profundamente en casos de uso en lugar de construir modelos fundacionales, que requieren capital masivo que pocos pueden levantar.\n\nHemos estudiado dos caminos para entrar al mercado: modelos fundacionales o especializarse en casos de uso valiosos para el negocio. Ejemplos como IDEs con IA (Cursor recibió una oferta de adquisición, Windsor fue adquirido) muestran éxito como 'wrappers' con UI/UX excepcional que aumenta la productividad.\n\nNuestro enfoque refleja esto: especializarnos tanto que el desplazamiento sea difícil. Esto convierte a gigantes como OpenAI de amenazas en aliados potenciales—o incluso adquirientes, si ven valor en nuestra solución o equipo.\n\nLa investigación de mercado en comunidades de San Francisco y Latinoamérica revela que la mayoría del enfoque en GenAI está en marketing, con pocas soluciones de video y voz en tiempo real debido a la complejidad. Tenemos ventajas tempranas en este mercado joven, con bordes competitivos y clientes existentes.",
         },
         {
           title: "Son demasiado tempranos",
