@@ -186,8 +186,8 @@ export const deckCopy: Record<Locale, DeckContent> = {
         "We're just getting started, but the results speak for themselves. We're deeply committed with a 2-year cliff and 6-year vesting schedule.",
       metrics: [
         {
-          label: "Launched",
-          value: "First week of October",
+          label: "Started working together & launched on",
+          value: "October 4",
         },
         {
           label: "Revenue",
@@ -519,8 +519,8 @@ export const deckCopy: Record<Locale, DeckContent> = {
         "Apenas estamos empezando, pero los resultados hablan por sí solos. Estamos profundamente comprometidos con un cliff de 2 años y un vesting de 6 años.",
       metrics: [
         {
-          label: "Lanzamiento",
-          value: "Primera semana de octubre",
+          label: "Comenzamos a trabjar juntos y lanzamos",
+          value: "4 de octubre",
         },
         {
           label: "Ingresos",
