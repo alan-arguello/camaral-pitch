@@ -191,7 +191,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
         },
         {
           label: "Revenue",
-          value: "$2,261\n$1,800 one-off\n$461 MRR",
+          value: "$2,310\n$1,800 one-off\n$510 MRR",
         },
         {
           label: "Raising",
@@ -524,7 +524,7 @@ export const deckCopy: Record<Locale, DeckContent> = {
         },
         {
           label: "Ingresos",
-          value: "$2,163\n$1,800 únicos\n$461 MRR",
+          value: "$2,310\n$1,800 únicos\n$510 MRR",
         },
         {
           label: "Levantando",
